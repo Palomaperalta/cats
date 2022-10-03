@@ -1,10 +1,11 @@
 import Header from '../components/Header'
+import MainLayout from './../components/common/MainLayout';
 
 function About(){
     return (
-        <div className='App'>
-            <Header /> 
-        </div>
+        <MainLayout>
+            
+        </MainLayout>
     )
 }
 export default About;
