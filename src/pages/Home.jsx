@@ -1,10 +1,11 @@
-import './Home.css';
+/** @jsxImportSource @emotion/react */
 import CatsCard from '../components/CatsCard';
 import {useState, useEffect, useContext} from 'react';
 import { ThemeContext } from './../App';
 import MainLayout from './../components/common/MainLayout';
 import CatsSummary from './../components/CatsSummary';
 import FilterCat from './../components/FilterCat';
+import * as styles from './Home.styles'
 
 function Home() {
   const [cats, setCats] = useState([])
@@ -37,11 +38,10 @@ function Home() {
     setCats(filteredCats)
   },[filters, originalCats, setCats])
 
-  
   return (
       <MainLayout>
         <CatsSummary cats={cats}/>
-        <div className={`homepage ${theme ? "light" : "dark"}`}>
+        <div css={styles.homepage(theme)}>
           <FilterCat 
             setFilters={setFilters}
             filters={filters}
