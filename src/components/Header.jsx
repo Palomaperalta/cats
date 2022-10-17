@@ -1,15 +1,16 @@
+/** @jsxImportSource @emotion/react */
 import {Link} from 'react-router-dom'
 import Switch from "react-switch";
 import {useContext} from "react"
 import { ThemeContext } from './../App';
-import './Header.css'
+import * as styles from './Header.styles'
 
 function Header({children}){
     const [theme, setTheme] = useContext(ThemeContext);
     return (
-        <div className='header'>
-            <div className="title">
-                        <div className="switch">
+        <div css={styles.header}>
+            <div css={styles.title}>
+                        <div css={styles.themeswitch}>
                             <h1>
                                 30 DAYS OF REACT
                             </h1>
@@ -17,11 +18,11 @@ function Header({children}){
                                 <Switch onChange={() => setTheme(!theme)} checked={theme} />
                             </div>
                         </div>
-                <div className='route'>
-                    <Link className='home' to="/">
+                <div css={styles.route}>
+                    <Link css={styles.home} to="/">
                         Home
                     </Link>
-                    <Link className='about' to="/about">
+                    <Link css={styles.about} to="/about">
                         About
                     </Link>
                 </div>

@@ -1,4 +1,5 @@
-import './FilterCat.css';
+/** @jsxImportSource @emotion/react */
+import * as styles from './FilterCat.styles'
 
 function FilterCat({setFilters,filters,originalCats}){
 
@@ -17,8 +18,8 @@ const handleOnChange = (e) =>{
   }
 
   return (
-    <div className="divinput">
-      <select className="select" onChange={handleSelect} value={filters.country}>
+    <div css={styles.divinput}>
+      <select  onChange={handleSelect} value={filters.country}>
         <option value="all">All</option>
         {originalCats.reduce((acc, cat)=> {
           if(!acc.includes(cat.origin)){
@@ -29,8 +30,8 @@ const handleOnChange = (e) =>{
           return <option value={country}>{country}</option>
         })}
       </select>
-      <input className="input" placeholder="Search for a cat" onChange={handleOnChange} value={filters.name} ></input>
-      <button className="reset" onClick={handleReset}>
+      <input css={styles.input} placeholder="Search for a cat" onChange={handleOnChange} value={filters.name} ></input>
+      <button css={styles.reset} onClick={handleReset}>
         Reset
       </button>
     </div>

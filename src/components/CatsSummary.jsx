@@ -1,4 +1,5 @@
-import './CatsSummary.css';
+/** @jsxImportSource @emotion/react */
+import * as styles from './CatsSummary.styles'
 
 function CatsSummary({cats}){
     function averageLife() {
@@ -20,11 +21,11 @@ function CatsSummary({cats}){
     }
 
     return (
-        <div className="cats-paradise">
+        <div css={styles.catsparadise}>
             <h1>
               Cats Paradise
             </h1>
-            <p className="breeds">
+            <p css={styles.breeds}>
               There are {cats.length} cats breeds
             </p>
             <p>

@@ -1,14 +1,16 @@
-import './CatsCard.css'
+/** @jsxImportSource @emotion/react */
+import * as styles from './CatsCard.styles'
+
 
 const CatsCard = ({name, origin, img, description, temperament, lifespan, weight}) => {
     return (
-        <div className="catCardContainer">
-            <div className="catimage">
+        <div css={styles.cardcatcontainer}>
+            <div css={styles.catimage}>
                 <img src={img} alt="cat"/>
             </div>
-            <div className="text">
+            <div css={styles.text}>
                 <p>{name}</p> 
-                <p className='country'>{origin}</p> 
+                <p css={styles.country}>{origin}</p> 
 
                 <p> <span>Temperament:</span> {temperament}</p>
 
