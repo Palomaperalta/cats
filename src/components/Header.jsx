@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import {Link} from 'react-router-dom'
-import Switch from "react-switch";
+import Switch from '@mui/material/Switch';
 import {useContext} from "react"
 import { ThemeContext } from './../App';
 import * as styles from './Header.styles'

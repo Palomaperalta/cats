@@ -1,4 +1,3 @@
-import Header from '../components/Header'
 import MainLayout from './../components/common/MainLayout';
 
 function About(){
