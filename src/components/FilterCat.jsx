@@ -1,5 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import * as styles from './FilterCat.styles'
+import Button from '@mui/material/Button';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
+
+
 
 function FilterCat({setFilters,filters,originalCats}){
 
@@ -19,21 +25,24 @@ const handleOnChange = (e) =>{
 
   return (
     <div css={styles.divinput}>
-      <select  onChange={handleSelect} value={filters.country}>
-        <option value="all">All</option>
+      <Select css={styles.select} onChange={handleSelect} value={filters.country}>
+        <MenuItem value="all">All</MenuItem>
         {originalCats.reduce((acc, cat)=> {
           if(!acc.includes(cat.origin)){
             acc.push(cat.origin)
           }
           return acc
         },[]).map(country => {
-          return <option value={country}>{country}</option>
+          return <MenuItem value={country}>{country}</MenuItem>
         })}
-      </select>
-      <input css={styles.input} placeholder="Search for a cat" onChange={handleOnChange} value={filters.name} ></input>
-      <button css={styles.reset} onClick={handleReset}>
-        Reset
-      </button>
+      </Select>
+      <TextField 
+        label="Cat Name" 
+        placeholder="Search for a cat" 
+        onChange={handleOnChange} 
+        value={filters.name}>
+      </TextField>
+      <Button css={styles.reset} size="medium" onClick={handleReset} variant="outlined">Reset</Button>
     </div>
 )}
 
