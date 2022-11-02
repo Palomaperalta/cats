@@ -4,5 +4,5 @@ export const homepage = (isLight) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: '16px'
+    padding: '16px 16px 0 16px'
 })

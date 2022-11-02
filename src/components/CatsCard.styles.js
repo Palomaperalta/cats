@@ -1,6 +1,6 @@
 export const cardcatcontainer = {
     display: 'flex',
-    width: '500px',
+    maxWidth: '500px',
     flexDirection: 'column',
     textAlign: 'left',
     fontSize: '18px',

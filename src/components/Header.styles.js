@@ -1,7 +1,6 @@
 export const header = {
     textAlign: 'center',
     backgroundColor: '#7560E8',
-    height: '30%',
     width: '100%',
     paddingBottom: '16px',
 }
@@ -33,6 +32,7 @@ export const about = {
 }
 export const themeswitch = {
     display: 'flex',
+    flexWrap: 'wrap',
     margin: '10px',
     justifyContent: 'center',
     alignItems: 'center',
